@@ -1,0 +1,92 @@
+*{
+	margin:0;
+	padding:0;
+}
+.mui-bar-nav {
+    -webkit-box-shadow: 0 0;
+    box-shadow: 0 0; 
+}
+.mui-off-canvas-left {
+	color: #fff;
+}
+.mui-bar-nav~.mui-content {
+    padding-top: 44px;
+    width:100%;
+}
+.mui-bar .mui-title {
+    text-align: center;
+    color: #fff;
+}
+ul {
+	list-style: none;
+	padding-left: 10%;
+}
+ul li{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+ul li a {
+	color: #fff;
+	font-size:14px;
+}
+ul li a span {
+	width:14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-size:14px 14px;
+	background-position: center center;
+	display: inline-block;
+	margin-right:5px;
+	top:2px;
+	position: relative;
+}
+ul li a .address {
+	background-image: url(../images/1.png);
+}
+ul li a .order {
+	background-image: url(../images/2.png);
+}
+ul li a .wuliu {
+	background-image: url(../images/3.png);
+}
+ul li a .tuih {
+	background-image: url(../images/4.png);
+}
+.tip{
+	width: 100%;
+	padding: 10px 0 0 0;
+	background: #fff;
+	display: none;
+}
+.tip .title{
+	border-bottom: 1px solid #bbb;
+	padding-left: 15px;
+	padding-right:15px;
+	padding-bottom: 10px;
+}
+.tip .title .p1{
+	font-size:16px;
+	color:#333;
+	font-weight: bold;
+	text-align: center;
+}
+.tip .title .p2{
+	font-size:14px;
+	color:#666;
+	margin-top:5px;
+}
+.tip .confirm{
+	width:100%;
+}
+.tip .confirm .yes,.tip .confirm .no{
+	width:50%;
+	text-align: center;
+	float:left;
+	font-size:14px;
+	color:#666;
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+.tip .confirm .no{
+	border-right:1px solid #bbb;
+}

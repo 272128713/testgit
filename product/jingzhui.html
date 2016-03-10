@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>商品详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/jingzhui.css" />
+	</head>
+	
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav" style="background:#333;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="history.go(-1)"></a>
+			<h1 class="mui-title">商品详情</h1>
+		</header>
+        <div class="content"></div>
+
+        <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/purl.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function(){
+                gid = $.url().param("gid");
+                content = $('.content');
+                html ='';
+                $.ajax({
+                    type:'POST',
+                    url:commonUrl+'get_goods_detail.php',
+                    data:{gid:gid},
+                    dataType:'json',
+                    success:function(ret){
+                        console.log(ret);
+                        img_url =  ret.result[0].img_url ;
+                        goods_name =  ret.result[0].goods_name ;
+                        price = ret.result[0].goods_price;
+                        html += '<div class="banner">';
+                        html += '	<img class="img1" src="' + ret.result[0].img_url + '" />';
+                        html += '</div>';
+                        html += '<div class="baseinfo">';
+                        html += '	<p class="price">￥' + ret.result[0].goods_price + '</p>';
+                        html += '	<p class="english">' + ret.result[0].goods_en_name + '</p>';
+                        html += '	<p class="name">' + ret.result[0].goods_name + '</p>';
+                        html += '	<p class="yong">' + ret.result[0].goods_summary + '</p>';
+                        html += '</div>';
+                        html += '<div class="proinfo">';
+                        html += '	' + ret.result[0].goods_content + '';
+                        html += '</div>';
+                        html += '<div class="button">';
+                        html += '	<div class="buy" onclick="yuding()">';
+                        html += '		<img src="images/car.png">立即预定';
+                        html += '	</div>';
+                        html += '</div>';
+                        content.html(html);
+                    },
+                    error:function(XMLHttpRequest, textStatus, errorThrown){
+                    //通常情况下textStatus和errorThrown只有其中一个包含信息
+                    //调用本次ajax请求时传递的options参数
+                        console.log(XMLHttpRequest);
+                        console.log(textStatus);
+                        console.log(errorThrown);
+                    }
+                });
+			});
+            function yuding(){
+
+                window.location.href = 'order.html?gid='+gid+'&price='+price+'&img_url='+img_url+'&goods_name='+goods_name;
+            }
+		</script>
+	</body>
+
+</html>

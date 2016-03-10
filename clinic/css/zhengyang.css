@@ -1,0 +1,90 @@
+.logo{
+	width:100%;
+	position: relative;
+}
+.logo img{
+	width:100%;
+	display: block;
+}
+.intro{
+	padding: 28px 2.5% 28px 2.5%; 
+	font-size: 15px;
+	color: #5c3103;
+	background: #faf6e1;
+}
+.intro2{
+	background: #fff;
+	color: #4c4c4c;
+}
+.title{
+	text-align: center;
+	margin-top: 12px;
+}
+.title p{
+	font-size: 18px;
+	color:#4dbbaa;
+	line-height:18px;
+}
+.title div{
+	width:11%;
+	height:2px;
+	background:#4dbbaa;
+	margin:0 auto;
+	margin-top:12px;
+}
+.four{
+	width:74%;
+	margin:0 auto;
+	position: relative;
+}
+.four img{
+	width:100%;
+	display: block;
+}
+/*.four .lpart{
+	width:120px;
+	float:left;
+	font-size:85px;
+	color:#f2f2f2;
+	line-height: 85px;
+	text-align: left;
+	position: relative;
+}
+.four .lpart .name{
+	font-size:15px;
+	color:#4c4c4c;
+	line-height:15px;
+	position: absolute;
+	left:-28px;
+	top:36px;
+	text-align: center;
+}
+.four .lpart .line{
+	width:20px;
+	height:3px;
+	background:#4dbbaa;
+	position: absolute;
+	left:16px;
+	bottom:15px;
+}
+.four .rpart{
+	float:right;
+	text-align: right;
+}
+.four .two .name{
+	left:15px;
+	top:29px;
+}
+.four .mar-top30{
+	margin-top:30px;
+}
+.four .mar-top45{
+	margin-top:45px;
+}*/
+.four .img1{
+	margin-top:30px;
+}
+.four .img2{
+	margin-top:45px;
+	margin-bottom:35px;
+}

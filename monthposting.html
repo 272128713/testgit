@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .submit{
+            width: 90%;
+            height: 43px;
+            background: #990000;
+            color:#fff;
+            line-height: 43px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 50px;
+            margin-left: 5%;
+        }
+        .submit:active{
+            background: #a20025;
+        }
+	</style>
+	</head>
+	<body>
+        <div class="submit" onclick="posting()">立即定制</div>
+        <script>
+            c = 0;
+            b = 1;
+            a = c+b;
+            function posting(){
+                if(navigator.userAgent.match('iPhone')){
+//                    gotoPosting();
+                    a = 1;
+                    b = 2;
+                    c = a+b;
+
+
+                }
+                if(navigator.userAgent.match('Android')){
+                    Android.gotoPosting();
+                }
+            }
+
+
+        </script>
+    </body>
+
+</html>

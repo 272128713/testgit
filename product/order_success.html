@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>预定成功</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">	
+		<link rel="stylesheet" type="text/css" href="css/order_success.css">
+		
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav" style="background:#333;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="history.go(-1)"></a>
+			<h1 class="mui-title">订购成功</h1>
+		</header>
+		<div class="content">
+			<p class="p1">恭喜您，您已预定成功！</p>
+			<div class="pro_list">
+				<div class="proimg">
+					<img src="" />
+				</div>
+				<div class="proinfo">
+					<p class="name"></p>
+					<p class="count"></p>
+				</div>
+				<div class="clear"></div>
+				<div class="order_id"></div>
+			</div>
+			<div class="qrcode">
+				<img src="images/qrcode.png">
+				<p>身边触手可及的健康产品</p>
+			</div>
+			<p>使用医信商城APP，订购更优惠；</p>
+			<p>使用医信商城APP，订单、物流查询更简单；</p>
+			<p>使用医信商城APP，还有更多...</p>
+		</div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/purl.js"></script>
+		<script type="text/javascript">
+		    //浏览器适配 兼容所有浏览器 rem单位专用 设置html root 字号
+		    (function (doc, win) {
+		        var docEl = doc.documentElement,
+		            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		            recalc = function () {
+		                var clientWidth = docEl.clientWidth;
+		                if (!clientWidth) return;
+		                docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+		            };
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvt, recalc, false);
+		        doc.addEventListener('DOMContentLoaded', recalc, false);
+		    })(document, window);
+            oid = $.url().param("oid");
+            img_url = $.url().param("img_url");
+            goods_num = $.url().param("goods_num");
+            goods_name = $.url().param("goods_name");
+
+            $('.proimg').children('img').attr('src',img_url);
+            $('.proinfo').children('.name').html(goods_name);
+            $('.proinfo').children('.count').html(goods_num+'件');
+            $('.order_id').html("请牢记订单号："+oid);
+
+		</script>
+	</body>
+</html>

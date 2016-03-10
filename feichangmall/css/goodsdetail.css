@@ -1,0 +1,170 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	height: 43px;
+	background: #fff;
+	position: fixed;
+	top:0;
+	z-index: 99999;
+	width: 100%;
+}
+
+.header .leftimg {
+	float: left;
+	width: 10%;
+	height: 43px;
+	background-image: url(../images/iconfont-552cc14536532.png);
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.header .signnum{
+	position: absolute;
+	right: 2px;
+	top:5px;
+	z-index: 100000;
+	color:#fff;
+	width: 18px;
+	height: 18px;
+	background: #e5007f;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 18px;
+}
+
+.header .textcenter {
+	line-height: 43px;
+	width: 80%;
+	text-align: center;
+	float: left;
+	font-size: 16px;
+}
+
+.header .textcenter img {
+	height: 15px;
+	position: relative;
+	top: 2px;
+}
+
+.header .rightimg {
+	float: right;
+	width: 10%;
+	height: 43px;
+	background-image: url(../images/iconfont-gouwuche.png);
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.view-detail{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.view-detail .p1{
+	color:#333;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 30px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+.view-detail .p2{
+	color:#777;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+.view-detail .p3{
+	color:#FF0000;
+	font-size: 16px;
+	margin-bottom: 5px;
+	font-weight: 700;
+}
+.view-detail .p3 del{
+	color:rgb(160,160,160);
+	margin-left: 20px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.view-detail .p4{
+	color:#777;
+	font-size: 14px;
+}
+.goods-content{
+	margin-bottom: 105px;
+	margin-top: 10px;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.goods-content .cc-title{
+	text-align: center;
+	background: url(../images/xline.png);
+	background-size: 11px;
+	background-position: center;
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 30px;
+	color:#9C9C9C;
+	font-size: 16px;
+	line-height: 30px;
+}
+.goods-content .cc-content{
+	font-size: 14px;
+	line-height: 20px;
+	color:#777;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.footer{
+	position: fixed;
+	bottom: 0;
+	z-index: 99999;
+	height: 64px;
+	background: #FDB403;
+	width: 100%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+}
+.footer .buylogo{
+	float: left;
+    margin-left: 3%;
+    width: 87px;
+    height: 90px;
+    position: relative;
+    top: -22px;
+}
+.footer .buylogo img{
+	width: 100%;
+}
+.footer .buylogo .signnum{
+    position: absolute;
+    right: -6px;
+    top: 8px;
+    z-index: 100000;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    background: #FF0000;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 27px;
+}
+.footer .money{
+    font-size: 14px;
+    color: #000;
+    float: left;
+    line-height: 25px;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+.footer .gobuy{
+	float: right;
+    margin-top: 10px;
+    background: #F8E248;
+    padding: 11px 27px 11px 27px;
+    margin-right: 11px;
+	
+}

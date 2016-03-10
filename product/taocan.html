@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>套餐</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	
+	<body>
+		<div class="header">
+			<div class="logo">
+				<img src="images/logo.png">
+				<div class="title">空中医院</div>
+				<div class="clear"></div>
+			</div>
+			<div class="tel">客服热线：400-669-3636</div>
+			<div class="clear"></div>
+		</div>
+		<div class="taocan">
+			<img src="images/999.png">
+			<div class="buynow">
+				<div class="btn">立即购买</div>
+				<img src="images/arrow.png">
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="taocan taocan2">
+			<img src="images/599.png">
+			<div class="more">
+				<div class="btn">点击查看详情</div>
+			</div>
+		</div>
+		<div class="taocan taocan3">
+			<img src="images/699.png">
+			<div class="more">
+				<div class="btn">点击查看详情</div>
+			</div>
+		</div>
+		<div class="footer">
+			<img src="images/qrcode.png">
+			<p class="p1">扫一扫</p>
+			<p class="p1">下载空中医院APP</p>
+			<p class="p2">有最适合你的私人医生</p>
+			<p class="p1">陕西省西安市高新区绿地蓝海10F</p>
+			<p class="p1">空中医信网络科技有限公司</p>
+			<p class="p1">www.kospital.com</p>
+			<span></span>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script type="text/javascript">
+		    //浏览器适配 兼容所有浏览器 rem单位专用 设置html root 字号
+		    (function (doc, win) {
+		        var docEl = doc.documentElement,
+		            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		            recalc = function () {
+		                var clientWidth = docEl.clientWidth;
+		                if (!clientWidth) return;
+		                docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+		            };
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvt, recalc, false);
+		        doc.addEventListener('DOMContentLoaded', recalc, false);
+		    })(document, window);
+		</script>
+		<script>
+			$('.taocan2 .more').click(function(){
+				window.location.href = 'jingzhui.html';
+			});
+			$('.taocan3 .more').click(function(){
+				window.location.href = 'yaozhui.html';
+			});
+		</script>
+	</body>
+
+</html>

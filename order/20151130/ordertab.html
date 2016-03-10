@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/tab.css">
+		<link rel="stylesheet" href="css/pending_payment.css">
+	</head>
+
+	<body>
+		<nav class="mui-bar mui-bar-tab">
+			<a id="defaultTab" class="mui-tab-item mui-active" href="#pending_payment">
+				<span class="mui-tab-label">待付款</span>
+			</a>
+			<a class="mui-tab-item" href="#pending_receiving">
+				<span class="mui-tab-label">待收货</span>
+			</a>
+			<a class="mui-tab-item" href="#already_receipt">
+				<span class="mui-tab-label">已收货</span>
+			</a>
+		</nav>
+		<!--第一个子页面开始-->
+		<div id="pending_payment" class="mui-control-content mui-active">
+		<div class="list-container">
+			<div class="list">
+				<div class="list-left">
+					<img class="picture" src="images/pro.png">
+				</div>
+				<div class="list-right">
+					<p class="pro_name">野外逃生应急预案A-12801</p>
+					<p class="pro_price">￥508.00元*2</p>
+					<div class="order_operate">
+						<div class="button pay">立即付款</div>
+						<div class="button cancel">取消订单</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="order_info">
+					<p class="order_number">订单号：P111111111</p>
+					<p class="order_je">订单金额：508.00</p>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--第一个子页面结束-->
+		<!--第二个子页面开始-->
+		<div id="pending_receiving" class="mui-control-content">
+			<div class="list-container">
+				<div class="list">
+					<div class="list-left">
+						<img class="picture" src="images/pro.png">
+					</div>
+					<div class="list-right">
+						<p class="pro_name">野外逃生应急预案A-12801</p>
+						<p class="pro_price">￥508.00元*2</p>
+						<div class="order_operate order_operate2">
+							<div class="button pay">确认收货</div>
+							<div class="wuliu">
+								<p class="danhao">物流单号</p>
+								<p>ZT12345678899</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="order_info">
+						<p class="order_number">订单号：P111111111</p>
+						<p class="order_je">订单金额：508.00</p>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="list-container">
+				<div class="list">
+					<div class="list-left">
+						<img class="picture" src="images/pro.png">
+					</div>
+					<div class="list-right">
+						<p class="pro_name">野外逃生应急预案A-12801</p>
+						<p class="pro_price">￥508.00元*2</p>
+						<div class="order_operate order_operate2">
+							<div class="button pay">确认收货</div>
+							<div class="wuliu">
+								<p class="danhao">物流单号</p>
+								<p>ZT12345678899</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="order_info">
+						<p class="order_number">订单号：P111111111</p>
+						<p class="order_je">订单金额：508.00</p>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--第二个子页面结束-->
+		<!--第三个子页面开始-->
+		<div id="already_receipt" class="mui-control-content">
+		<div class="list-container">
+			<div class="list">
+				<div class="list-left">
+					<img class="picture" src="images/pro.png">
+				</div>
+				<div class="list-right">
+					<p class="pro_name">野外逃生应急预案A-12801</p>
+					<p class="pro_price">￥508.00元*2</p>
+					<div class="order_operate order_operate3">
+						已于2015-12-15 17:52确认收货
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="order_info">
+					<p class="order_number">订单号：P111111111</p>
+					<p class="order_je">订单金额：508.00</p>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--第三个子页面结束-->
+		<script src="js/mui.min.js"></script>
+		<!--script type="text/javascript" charset="utf-8">
+			 //mui初始化
+			mui.init();
+			var subpages = ['pending_payment.html', 'pending_receiving.html', 'already_receipt.html'];
+			var subpage_style = {
+				top: '45px',
+				bottom: '51px'
+			};
+			
+			var aniShow = {};
+			
+			 //创建子页面，首个选项卡页面显示，其它均隐藏；
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				for (var i = 0; i < 3; i++) {
+					var temp = {};
+					var sub = plus.webview.create(subpages[i], subpages[i], subpage_style);
+					if (i > 0) {
+						sub.hide();
+					}else{
+						temp[subpages[i]] = "true";
+						mui.extend(aniShow,temp);
+					}
+					self.append(sub);
+				}
+			});
+			 //当前激活选项
+			var activeTab = subpages[0];
+			var title = document.getElementById("title");
+			 //选项卡点击事件
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href');
+				if (targetTab == activeTab) {
+					return;
+				}
+				//更换标题
+				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
+				//显示目标选项卡
+				//若为iOS平台或非首次显示，则直接显示
+				if(mui.os.ios||aniShow[targetTab]){
+					plus.webview.show(targetTab);
+				}else{
+					//否则，使用fade-in动画，且保存变量
+					var temp = {};
+					temp[targetTab] = "true";
+					mui.extend(aniShow,temp);
+					plus.webview.show(targetTab,"fade-in",300);
+				}
+				//隐藏当前;
+				plus.webview.hide(activeTab);
+				//更改当前活跃的选项卡
+				activeTab = targetTab;
+			});
+			 //自定义事件，模拟点击“首页选项卡”
+			document.addEventListener('gohome', function() {
+				var defaultTab = document.getElementById("defaultTab");
+				//模拟首页点击
+				mui.trigger(defaultTab, 'tap');
+				//切换选项卡高亮
+				var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+				if (defaultTab !== current) {
+					current.classList.remove('mui-active');
+					defaultTab.classList.add('mui-active');
+				}
+			});
+		</script-->
+	</body>
+</html>

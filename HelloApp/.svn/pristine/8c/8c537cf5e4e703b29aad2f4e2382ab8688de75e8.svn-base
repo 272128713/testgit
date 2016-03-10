@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<title>Hello APP</title>
+		<link rel="stylesheet" type="text/css" href="./css/api.css" />
+		<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<h1>我的小苹果json测试</h1>
+			</div>
+			<div id="main">
+				<a onclick="openWin('api')">云端api接口</a>
+				<br>
+				<a onclick="openWin('163')">网易新闻接口</a>
+				<script>
+					apiready = function() {
+						$api.fixIos7Bar($api.dom('body'))
+					}
+					function openWin(param) {
+						api.openWin({
+							name : 'main',
+							url : 'html/main.html',
+							pageParam : {
+								type : param
+							}
+						})
+					}
+				</script>
+			</div>
+			<div id="footer">
+				<h5>Copyright &copy;2014 apple.dotey</h5>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="./script/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			console.log("Hello APICloud");
+			var header = $api.byId('header');
+			$api.fixIos7Bar(header);
+			var headerPos = $api.offset(header);
+			var main = $api.byId('main');
+			var mainPos = $api.offset(main);
+			api.openFrame({
+				name : 'main',
+				url : 'html/main.html',
+				bounces : true,
+				rect : {
+					x : 0,
+					y : headerPos.h,
+					w : headerPos.w,
+					h : mainPos.h
+				}
+			});
+		};
+	</script>
+</html>
