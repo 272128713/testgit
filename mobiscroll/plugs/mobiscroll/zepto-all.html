@@ -56,9 +56,6 @@
             background: #fff;
         }
 
-        .demo {
-            display: none;
-        }
 
     </style>
 
@@ -131,11 +128,10 @@
                 }
 
                 $('.demo-test-' + demo).scroller('destroy').scroller($.extend(opt[demo], {
-                    theme: $('#theme').val(),
-                    mode: $('#mode').val(),
+                    theme: 'android-ics light',
+                    mode: 'scroller',
                     lang: 'zh',
-                    display: $('#display').val(),
-                    animate: $('#animation').val()
+                    display: 'bottom',
                 }));
                 $('.demo').hide();
                 $('.demo-' + demo).show();
@@ -155,51 +151,6 @@
 
         <div data-role="content" data-theme="d" class="content">
             <div class="settings">
-                <div data-role="fieldcontain">
-                    <label for="theme">主题样式</label>
-                    <select name="theme" id="theme">
-                        <option value="default">默认</option>
-                        <option value="android-ics">Android ICS</option>
-                        <option value="android-ics light">Android ICS Light</option>
-                        <option value="android">Android</option>
-                        <option value="sense-ui">Sense UI</option>
-                        <option value="ios">iOS</option>
-                        <option value="wp">Windows Phone</option>
-                        <option value="wp light">Windows Phone Light</option>
-                    </select>
-                </div>
-                <div data-role="fieldcontain">
-                    <label for="mode">模式(滚动/点击/混合)</label>
-                    <select name="mode" id="mode">
-                        <option value="scroller">滚动</option>
-                        <option value="clickpick">点击</option>
-                        <option value="mixed">混合</option>
-                    </select>
-                </div>
-                <div data-role="fieldcontain">
-                    <label for="display">显示形式</label>
-                    <select name="display" id="display">
-                        <option value="modal">拾取</option>
-                        <option value="inline">直接</option>
-                        <option value="bubble">气泡</option>
-                        <option value="top">顶部</option>
-                        <option value="bottom">底部</option>
-                    </select>
-                </div>
-                <div data-role="fieldcontain">
-                    <label for="animation">动画</label>
-                    <select name="animation" id="animation" class="settings">
-                        <option value="">无</option>
-                        <option value="fade">渐显</option>
-                        <option value="flip">翻转</option>
-                        <option value="pop">弹出</option>
-                        <option value="swing">翻书</option>
-                        <option value="slidehorizontal">从左滑出</option>
-                        <option value="slidevertical">自上而下</option>
-                        <option value="slidedown">从上滑出</option>
-                        <option value="slideup">从下滑出</option>
-                    </select>
-                </div>
                 <div data-role="fieldcontain">
                     <label for="demo">显示类型</label>
                     <select name="demo" id="demo">
